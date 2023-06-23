@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #E42D20;
+}
+
+#outer-div {
+    height: 45vw;
+    width: 55vw;
+    border-radius: 100px;
+    background: radial-gradient(#EEDAD8 70%, #f58176);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#inner-div {
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #CE7A72 1%, #e7c4bf);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clock-div img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+#clock-div {
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    background: radial-gradient(#E42D20 60%, rgb(20, 8, 8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clock-center {
+    height: 4.5vw;
+    width: 4.5vw;
+    background: linear-gradient(to top, #E9CBC9, rgb(247, 103, 103));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    position: absolute;
+}
+
+#clock-inner-center {
+    height: 60%;
+    width: 60%;
+    background-color: rgb(247, 173, 173);
+    border-radius: 50%;
+}
+
+/* Handling hands of watch */
+.hand {
+    position: absolute;
+}
+
+#second-hand {
+    height: 90%;
+    width: 0.7vw;
+    z-index: 4;
+}
+
+.invisible-hand {
+    height: 50%;
+}
+
+.visible-hand {
+    height: 50%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 4px 0px 15px 1px black;
+}
+
+#second-hand .visible-hand {
+    background-color: rgb(248, 198, 198);
+    height: 65%;
+}
+
+#minute-hand {
+    z-index: 3;
+    height: 80%;
+    width: 2.5vw;
+    /* transform: rotate(90deg); */
+}
+
+#minute-hand .visible-hand {
+    background-color: rgb(15, 4, 4);
+}
+
+#hour-hand {
+    z-index: 2;
+    height: 65%;
+    width: 2.5vw;
+    /* transform: rotate(30deg); */
+}
+
+#hour-hand .visible-hand {
+    background-color: rgb(15, 4, 4);
+}
+
+/* media queries */
+@media screen and (max-width:900px) {
+    #outer-div {
+        height: 55vw;
+        width: 60vw;
+    }
+
+    #inner-div {
+        height: 45vw;
+        width: 45vw;
+    }
+
+    #clock-div {
+        height: 40vw;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #outer-div {
+        height: 80vw;
+        width: 80vw;
+    }
+
+    #inner-div {
+        height: 55vw;
+        width: 55vw;
+    }
+
+    #clock-div {
+        height: 50vw;
+        width: 50vw;
+    }
+}
